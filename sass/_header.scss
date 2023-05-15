@@ -1,0 +1,194 @@
+header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.804);
+
+    .header-top {
+        background-color: rgba(0, 0, 0, 0.466);
+
+        nav {
+            display: flex;
+
+            @include devices(sm) {
+                justify-content: flex-end;
+            }
+
+            ul {
+                font-size: 16px;
+                justify-content: center;
+                align-items: center;
+
+                @include devices(sm) {
+                    display: flex;
+                    justify-content: end;
+                }
+
+                li {
+                    cursor: pointer;
+                    padding: 5px 10px;
+                    font-size: 14px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+
+                    &:hover {
+                        background-color: rgba(53, 53, 53, 0.822);
+                    }
+
+                    a {
+                        color: #fff;
+                    }
+                }
+
+            }
+        }
+    }
+
+    .s-header {
+        position: relative;
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+
+            img {
+                width: 180px;
+            }
+
+            .fa-bars {
+                color: #fff;
+                position: relative;
+                cursor: pointer;
+                display: block;
+                padding: 25px 15px;
+
+
+                @include devices(lg) {
+                    display: none;
+                }
+            }
+
+            .search {
+                font-size: 18px;
+                color: #fff;
+                cursor: pointer;
+                display: block;
+
+            }
+        }
+
+        .main-nav {
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            flex-wrap: wrap;
+
+            @include max-w(lg) {
+                display: none;
+            }
+
+            li {
+                padding: 25px 15px;
+                font-weight: 700;
+                font-size: 14px;
+                text-transform: uppercase;
+
+                &.dropdown {
+                    overflow: hidden;
+
+                    .dropdown-content {
+                        display: none;
+                        position: absolute;
+                        width: 100%;
+                        left: 0;
+                        top: 100%;
+                        transition: all 5s ease-in;
+                        -webkit-transition: all 5s ease-in;
+                        -moz-transition: all 5s ease-in;
+                        -ms-transition: all 5s ease-in;
+                        -o-transition: all 5s ease-in;
+
+
+                        .box {
+
+                            display: flex;
+                            flex-wrap: wrap;
+                            background-color: #fff;
+
+                            .megamenu-groupe {
+                                flex-basis: 25%;
+                                padding: 15px;
+                                height: max-content;
+
+                                h4 {
+                                    margin-bottom: 16px;
+                                    text-transform: uppercase;
+                                    font-size: 15px;
+                                    font-weight: 700;
+                                    padding: 10px 12px;
+                                    background: #262626;
+                                    color: #fff;
+                                    line-height: 1.8;
+                                }
+
+                                a {
+                                    font-weight: 700;
+                                    cursor: pointer;
+                                    transition: .2s;
+                                    color: #0853a2;
+                                    text-transform: capitalize;
+
+                                    &:hover {
+                                        text-decoration: underline #0853a2;
+                                    }
+                                }
+
+                                li {
+                                    margin-bottom: 10px;
+                                    padding: 0;
+                                }
+
+                            }
+                        }
+
+                        button {
+                            display: block;
+                            background: #0853a2;
+                            padding: 12px 20px;
+                            text-decoration: none !important;
+                            color: #fff;
+                            font-size: 16px;
+                            font-weight: 700;
+                            border: 0;
+                            outline: 0;
+                            border-radius: 50px;
+                            margin: 16px auto;
+                        }
+                    }
+
+                    .dropbtn {
+                        &:active .dropdown-content {
+                            display: block;
+                        }
+                    }
+
+                    &:hover .dropdown-content {
+                        display: block;
+                    }
+                }
+
+                a {
+                    color: #fff;
+
+                    &:hover {
+                        color: #7ad03a;
+                    }
+                }
+            }
+        }
+    }
+}

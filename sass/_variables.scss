@@ -1,0 +1,30 @@
+// media + container
+$xs: 376px;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1024px;
+$xxl: 1200px;
+
+$media: (
+    xs: $xs, //--max-width 376px
+    sm: $sm, //--min-width...
+    md: $md,
+    lg: $lg,
+    xl: $xl,
+    xxl: $xxl
+);
+
+$col-xs:320px; 
+$col-sm: 560px;  // ()
+$col-md: 740px;  // ()
+$col-lg: 970px;  // ()
+$col-xl: 1000px; // ()
+
+$col-media: (
+    col-xs: $col-xs,
+    col-sm: $col-sm, 
+    col-md: $col-md, 
+    col-lg: $col-lg,
+    col-xl: $col-xl,
+);
